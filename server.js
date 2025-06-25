@@ -100,6 +100,10 @@ scrapeUniversities();
 
 /* ---------------------------------- Routes --------------------------------- */
 
+app.get('/', (req, res) => {
+  res.json({ success: true, message: 'Nigerian Universities API' });
+});
+
 app.get('/api/universities', (req, res) => {
   let result = [...universities];
 
